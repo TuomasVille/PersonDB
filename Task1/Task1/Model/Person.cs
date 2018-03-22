@@ -12,6 +12,19 @@ namespace Task1.Model
             Phone = new HashSet<Phone>();
         }
 
+        public Person(string name, short? age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        public Person(string name, short? age, ICollection<Phone> phone)
+        {
+            Name = name;
+            Age = age;
+            Phone = phone;
+        }
+
         public long Id { get; set; }
         [Column(TypeName = "nchar(10)")]
         public string Name { get; set; }
